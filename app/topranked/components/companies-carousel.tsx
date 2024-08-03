@@ -87,12 +87,12 @@ const CompaniesCarousel = () => {
 
       <div className="grid grid-cols-2 gap-7 h-min">
         {visibleCompanies.map((comp) => (
-          <div key={comp.id} className="flex flex-col w-full gap-3">
+          <div key={comp.id} className="grid grid-rows-[70px,70px,1fr,20px,3fr] sm:flex sm:flex-col w-full gap-3">
             <Image src={comp.img} alt={comp.name} width={70} height={70} />
             <p className="font-bold">{comp.name}</p>
             <div className="flex items-center justify-start gap-3">
               <FontAwesomeIcon icon={faStore} size="2xs" className="w-4 h-4 " />
-              <p className="text-xs font-light text-nowrap">
+              <p className="text-xs font-light">
                 {comp.companyType}
               </p>
             </div>
