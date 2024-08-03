@@ -2,21 +2,30 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const NavBar = () => {
   const pathname = usePathname();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navItems = [
-    { id:1,name: "For You", route: "/foryou", fakeRoute: "/" },
-    { id:2,name: "My Marketplaces", route: "/my", fakeRoute: "/" },
-    { id:3,name: "Top Ranked", route: "/topranked", fakeRoute: "/topranked" },
-    { id:4,name: "App Integration", route: "/appintegration", fakeRoute: "/" },
-    { id:5,name: "Reward", route: "/reward", fakeRoute: "/" },
-    { id:6,name: "Services", route: "/services", fakeRoute: "/" },
-    { id:7,name: "Review", route: "/review", fakeRoute: "/" },
+    { id: 1, name: "For You", route: "/foryou", fakeRoute: "/" },
+    { id: 2, name: "My Marketplaces", route: "/my", fakeRoute: "/" },
+    { id: 3, name: "Top Ranked", route: "/topranked", fakeRoute: "/topranked" },
+    {
+      id: 4,
+      name: "App Integration",
+      route: "/appintegration",
+      fakeRoute: "/",
+    },
+    { id: 5, name: "Reward", route: "/reward", fakeRoute: "/" },
+    { id: 6, name: "Services", route: "/services", fakeRoute: "/" },
+    { id: 7, name: "Review", route: "/review", fakeRoute: "/" },
   ];
+
+  useEffect(() => {
+    setIsMenuOpen(false);
+  }, [pathname]);
 
   return (
     <nav className="w-full bg-white shadow-md">
