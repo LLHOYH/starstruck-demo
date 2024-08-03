@@ -1,0 +1,5 @@
+[
+    { "id":1, "name": "Zandesk Marketplace", "img": "/companyA.png" },
+    { "id":2, "name": "Apollo Intelligence", "img": "/companyB.jpeg" },
+    { "id":3, "name": "XYZ Intelligence", "img": "/companyC.png" }
+]
